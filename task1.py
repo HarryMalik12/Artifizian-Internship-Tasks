@@ -1,14 +1,3 @@
-num = int(input("Enter any number: "))
-is_prime = True
-if num <= 1:
-    is_prime = False
-else:
-    for i in range(2, num):
-        if num % i == 0:
-            is_prime = False
-            break
-    
-if is_prime:
-    print(num, "is a prime number")
-else:
-    print(num, "is not a prime number")
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_n = [num for num in numbers if num % 2 == 0]
+print(even_n)

@@ -1,8 +1,12 @@
-text = input("Enter any string: ")
-reversed_text = ""
-for char in text:
-    reversed_text = char + reversed_text
-if text == reversed_text:
-    print("Palindrome")
-else:
-    print("Not a palindrome")
+sentence = "Hello World"
+vowels = "aeiouAEIOU"
+vowel_count = 0
+consonant_count = 0
+for char in sentence:
+    if char.isalpha():
+        if char in vowels:
+            vowel_count = vowel_count + 1
+        else:
+            consonant_count = consonant_count + 1
+print("Vowels:", vowel_count)
+print("Consonants:", consonant_count)

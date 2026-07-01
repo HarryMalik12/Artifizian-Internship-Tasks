@@ -1,5 +1,9 @@
-text = input("Enter any string: ")
-reversed_text = ""
-for char in text:
-    reversed_text = char + reversed_text
-print(reversed_text)
+sentence = "My Name Is Haris My Name Is Ahsan"
+words = sentence.split()
+frequency = {}
+for word in words:
+    if word in frequency:
+        frequency[word] = frequency[word] + 1
+    else:
+        frequency[word] = 1
+print(frequency)

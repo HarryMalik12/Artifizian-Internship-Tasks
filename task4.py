@@ -1,9 +1,11 @@
-for num in range(1, 101):
-    if num % 3 == 0 and num % 5 == 0:
-        print("FizzBuzz")
-    elif num % 3 == 0:
-        print("Fizz")
-    elif num % 5 == 0:
-        print("Buzz")
+dict1 = {"a": 10, "b": 20, "c": 30}
+dict2 = {"b": 5, "c": 15, "d": 25}
+merged = {}
+for key in dict1:
+    merged[key] = dict1[key]
+for key in dict2:
+    if key in merged:
+        merged[key] = merged[key] + dict2[key]
     else:
-        print(num)
+        merged[key] = dict2[key]
+print(merged)

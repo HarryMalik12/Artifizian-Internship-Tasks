@@ -1,8 +1,9 @@
-n = int(input("Enter how many terms you want to find: "))
-a = 0
-b = 1
-for i in range(n):
-    print(a)
-    c = a + b
-    a = b
-    b = c
+numbers = [1, 2, 3, 2, 4, 5, 1, 6, 3]
+seen = set()
+duplicates = set()
+for num in numbers:
+    if num in seen:
+        duplicates.add(num)
+    else:
+        seen.add(num)
+print("Duplicates:", duplicates)

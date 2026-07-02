@@ -1,12 +1,9 @@
-sentence = "Hello World"
-vowels = "aeiouAEIOU"
-vowel_count = 0
-consonant_count = 0
-for char in sentence:
-    if char.isalpha():
-        if char in vowels:
-            vowel_count = vowel_count + 1
-        else:
-            consonant_count = consonant_count + 1
-print("Vowels:", vowel_count)
-print("Consonants:", consonant_count)
+def fibonacci(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
+# print the first 10 Fibonacci numbers
+for i in range(10):
+    print(fibonacci(i), end=" ")

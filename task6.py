@@ -1,14 +1,18 @@
-items = ["is", "or", "or", "is", "is", "or","my","is"]
-frequency = {}
-for item in items:
-    if item in frequency:
-        frequency[item] = frequency[item] + 1
-    else:
-        frequency[item] = 1
-most_frequent = None
-highest_count = 0
-for item in frequency:
-    if frequency[item] > highest_count:
-        highest_count = frequency[item]
-        most_frequent = item
-print("Most frequent:", most_frequent)
+students = [
+{"name": "Ali", "marks": 78},
+{"name": "Zara", "marks": 92},
+{"name": "Bilal", "marks": 65},
+{"name": "Sana", "marks": 88},
+]
+# key tells sorted() what to sort BY - here, each student's
+# "marks" value. sorted() never changes the original list,
+# it returns a brand new sorted one.
+sorted_by_marks = sorted(students, key=lambda student: student["marks"])
+print("Ascending (lowest marks first):")
+for s in sorted_by_marks:
+    print(s["name"], "-", s["marks"])
+# add reverse=True to sort highest marks first
+top_first = sorted(students, key=lambda student: student["marks"], reverse=True)
+print("\nDescending (highest marks first):")
+for s in top_first:
+    print(s["name"], "-", s["marks"])

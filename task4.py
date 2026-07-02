@@ -1,11 +1,9 @@
-dict1 = {"a": 10, "b": 20, "c": 30}
-dict2 = {"b": 5, "c": 15, "d": 25}
-merged = {}
-for key in dict1:
-    merged[key] = dict1[key]
-for key in dict2:
-    if key in merged:
-        merged[key] = merged[key] + dict2[key]
-    else:
-        merged[key] = dict2[key]
-print(merged)
+def factorial(n):
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers")
+    if n == 0 or n == 1: # base case
+        return 1
+    return n * factorial(n - 1) # recursive case
+print(factorial(5)) # 5 * 4 * 3 * 2 * 1
+print(factorial(0))
+print(factorial(7))

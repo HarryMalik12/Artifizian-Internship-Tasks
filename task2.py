@@ -1,9 +1,4 @@
-sentence = "My Name Is Haris My Name Is Ahsan"
-words = sentence.split()
-frequency = {}
-for word in words:
-    if word in frequency:
-        frequency[word] = frequency[word] + 1
-    else:
-        frequency[word] = 1
-print(frequency)
+numbers = [1, 2, 3, 4, 5]
+squared = map(lambda x: x ** 2, numbers)
+squared_list = list(squared)
+print(squared_list)
